@@ -77,12 +77,12 @@ int main() {
     {
         cout << "\n Hello, and welcome to the Powers & Roots Menu." << endl
              << endl;
-        cout << "This menu allows you to take poers and roots of a number. " << endl
+        cout << "This menu allows you to take powers and roots of a number. " << endl
              << endl;
         cout << "\t\t POWERS & ROOTS MENU" << endl
              << endl;
         cout << "a. \t \t Square a number \t (X^2)" << endl;
-        cout << "b. \t \t Cube a number \t (X^3)" << endl;
+        cout << "b. \t \t Cube a number \t \t (X^3)" << endl;
         cout << "c. \t \t Raise to any power \t (X^Y)" << endl;
         cout << "d. \t \t Square root a number \t (X^1/2)" << endl;
         cout << "e. \t \t Cube root any number \t (X^1/3)" << endl;
@@ -113,9 +113,24 @@ int main() {
             cin >> power1;
             cin >> power2;
             double squareOutput = pow(power1, power2);
-            cout << squareOutput << " is " << power1 << " to the " << power2 << " power. " << endl
-                 << endl;
+            cout << squareOutput << " is " << power1 << " to the " << power2 << " power. " << endl << endl;
         }
+        if (powersMenu == 'd' || powersMenu == 'D') {
+            cout << "Please input a number to square root: " << endl;
+            cin >> power1;
+            double squareOutput = sqrt(power1);
+            cout << squareOutput << " is the square root of " << power1 << endl << endl;
+        }
+        if (powersMenu == 'e' || powersMenu == 'E') {
+            cout << "Please input a number to cube root: " << endl;
+            cin >> power1;
+            double squareOutput = pow(power1, 1/3); // cubed roots also are not working. this is sad
+            cout << squareOutput << " is the cubed root of " << power1 << endl << endl;
+        }
+        /* This is the very inneficient part of my code. I wasn't sure how to loop back to the beginning of the program, so I paste-bombed
+        the whole thing back in here. Pls be careful with the code in here as it could ruin the whole thing. Lol. 
+         */
+
         if (powersMenu == 'm' || powersMenu == 'M')
         {
             cout << "Returning to main menu...";
