@@ -124,8 +124,15 @@ int main() {
         if (powersMenu == 'e' || powersMenu == 'E') {
             cout << "Please input a number to cube root: " << endl;
             cin >> power1;
-            double squareOutput = pow(power1, 1/3); // cubed roots also are not working. this is sad
+            double squareOutput = cbrt(power1); // hopefuly cbrt works
             cout << squareOutput << " is the cubed root of " << power1 << endl << endl;
+        }
+        if (powersMenu == 'f' || powersMenu == 'F') {
+            cout << "Please input two numbers to square root: " << endl;
+            cin >> power1;
+            cin >> power2;
+            double squareOutput = sqrt(power1, power2); // not sure if that will work
+            cout << squareOutput << " is your answer. " << endl << endl;
         }
         /* This is the very inneficient part of my code. I wasn't sure how to loop back to the beginning of the program, so I paste-bombed
         the whole thing back in here. Pls be careful with the code in here as it could ruin the whole thing. Lol. 
