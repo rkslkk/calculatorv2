@@ -131,7 +131,7 @@ int main() {
             cout << "Please input two numbers to square root: " << endl;
             cin >> power1;
             cin >> power2;
-            double squareOutput = sqrt(power1, power2); // not sure if that will work
+            double squareOutput = pow(power1, 1/power2); // not sure if that will work
             cout << squareOutput << " is your answer. " << endl << endl;
         }
         /* This is the very inneficient part of my code. I wasn't sure how to loop back to the beginning of the program, so I paste-bombed
