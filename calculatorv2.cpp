@@ -141,7 +141,7 @@ int main() {
         if (powersMenu == 'm' || powersMenu == 'M')
         {
             cout << "Returning to main menu...";
-            char mainMenu = 'z';
+           /* char mainMenu = 'z';
             char powersMenu = 'z';
             double add1, add2 = 0;
             double subtract1, subtract2 = 0;
@@ -261,7 +261,8 @@ int main() {
             {
                 cout << "\n You have chosen to quit the program. Goodbye." << endl;
                 exit(0);
-            }
+            } */
+continue;
         }
     }
     if (mainMenu == 'q' || mainMenu == 'Q')
