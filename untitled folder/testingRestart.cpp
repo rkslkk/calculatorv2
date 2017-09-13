@@ -6,7 +6,8 @@ using namespace std;
 
 char choice, mainMenu(), ch;
 double addition1, addition2, subtraction1, subtraction2, multiplication1, multiplication2;
-void additionMenu(), subtractionMenu(), multiplicationMenu();
+double division1, division2;
+void additionMenu(), subtractionMenu(), multiplicationMenu(), divisionMenu();
 
 int main() {
 	bool endProgram = true;
@@ -22,7 +23,10 @@ int main() {
 			break;
 		case 'c':
 			multiplicationMenu();
-			break;
+            break;
+        case 'd':
+            divisionMenu();
+            break;
 		case 'q':
 			endProgram = false;
 			break;
@@ -36,16 +40,16 @@ char mainMenu() {
 	cout << "A. \t \t Addition \t \t (X+Y)" << endl << endl;
 	cout << "B. \t \t Subtraction \t \t (X-Y)" << endl << endl;
 	cout << "C. \t \t Multiplication \t (X*Y)" << endl << endl;
-	// cout << ""
+	cout << "D. \t \t Division \t \t (X/Y)" << endl << endl;
 	cout << "Q. \t \t Quit the program \t \t " << endl << endl;
 	cin >> choice;
 
-	if (choice == 'a') {
+	/* if (choice == 'a') {
 		cout << "You have chosen addition." << endl << endl;
 	}
 	else if (choice == 'b') {
 		cout << "You have chosen subtraction." << endl << endl;
-	}
+	} */ // I'm not completely sure I need these, so far no I'll comment them out
 
 	return choice;
 }
@@ -79,7 +83,7 @@ void additionMenu() {
 
 void multiplicationMenu() {
 	system("cls");
-	cout << "You have chosen multiplication. Please input two numbers to multiple: " << endl << endl;
+	cout << "You have chosen multiplication. Please input two numbers to multiply: " << endl << endl;
 	cin >> multiplication1;
 	cin >> multiplication2;
 	double multiplicationOutput = multiplication1 * multiplication2;
@@ -88,5 +92,14 @@ void multiplicationMenu() {
 	cin.ignore();
 	cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
 	ch = cin.get();
+}
+
+void divisionMenu() {
+    system("cls");
+    cout << "You have chosen division. Please input two numbers to divide: " << endl << endl;
+    cin >> division1;
+    cin >> division2;
+    double divisionOutput = division1 * division2;
+    cout << divisionOutput << " is " << division1 << " divided by " << division2; 
 }
 
