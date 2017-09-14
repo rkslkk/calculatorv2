@@ -40,13 +40,20 @@ int main() {
 char mainMenu() {
 	system("cls");
 	system("clear"); // for linux
-	cout << "Welcome to the math menu" << endl << endl;
+	cout << "CALCULATOR PRACTICE PROGRAM" << endl << endl;
+	cout << "Hello and welcome to the calculator practice program. \nThis program allows you to practice your math skills. \nChoose what you want to practice in the menu below.\n\n";
+	cout << "-----------------------------------------------------" << endl;
+	cout << "\t \t Main Menu" << endl;
+	cout << "-----------------------------------------------------" << endl << endl;
 	cout << "A. \t \t Addition \t \t (X+Y)" << endl << endl;
 	cout << "B. \t \t Subtraction \t \t (X-Y)" << endl << endl;
 	cout << "C. \t \t Multiplication \t (X*Y)" << endl << endl;
     cout << "D. \t \t Division \t \t (X/Y)" << endl << endl;
     cout << "E. \t \t Powers + Roots \t \t" << endl << endl;
 	cout << "Q. \t \t Quit the program \t \t " << endl << endl;
+	cout << "-----------------------------------------------------" << endl << endl;
+	cout << "\t  Enter your choice [a - e, q]" << endl;
+	cout << "-----------------------------------------------------" << endl << endl;
 	cin >> choice;
 	cout << endl << endl;
 
@@ -214,7 +221,7 @@ char powersMenu() {
 	else if (powersChoice == 'm') {
 		cout << endl;
 	}
-	else if (powersChoice = 'q') {
+	else if (powersChoice == 'q') {
 		exit(0);
 	}
 }
