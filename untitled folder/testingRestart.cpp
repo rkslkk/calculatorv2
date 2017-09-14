@@ -4,9 +4,9 @@
 
 using namespace std;
 
-char choice, mainMenu(), ch;
+char choice, mainMenu(), ch, powersMenu(), powersChoice;
 double addition1, addition2, subtraction1, subtraction2, multiplication1, multiplication2;
-double division1, division2;
+double division1, division2, powers1;
 void additionMenu(), subtractionMenu(), multiplicationMenu(), divisionMenu();
 
 int main() {
@@ -105,5 +105,17 @@ void divisionMenu() {
     cin.ignore();
 	cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
 	ch = cin.get();
+}
+
+char powersMenu() {
+    cout << "Welcome to the powers and roots Menu. Please choose what you would like to do. " << endl << endl;
+    cout << "A. Square Stuff (X^2)" << endl << endl;
+    cin >> powersChoice;
+    if (powersChoice == 'a') {
+        cout << "please input a number to square: "
+        cin >> powers1;
+        double squareOutput = pow(powers1, 2);
+        cout << squareOutput << " is " << powers1 << " squared" << endl << endl;
+    }
 }
 
