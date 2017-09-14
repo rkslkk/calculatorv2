@@ -27,6 +27,9 @@ int main() {
         case 'd':
             divisionMenu();
             break;
+        case 'e':
+            powersMenu();
+            break;
 		case 'q':
 			endProgram = false;
 			break;
@@ -40,7 +43,8 @@ char mainMenu() {
 	cout << "A. \t \t Addition \t \t (X+Y)" << endl << endl;
 	cout << "B. \t \t Subtraction \t \t (X-Y)" << endl << endl;
 	cout << "C. \t \t Multiplication \t (X*Y)" << endl << endl;
-	cout << "D. \t \t Division \t \t (X/Y)" << endl << endl;
+    cout << "D. \t \t Division \t \t (X/Y)" << endl << endl;
+    cout << "E. \t \t Powers + Roots \t \t" << endl << endl;
 	cout << "Q. \t \t Quit the program \t \t " << endl << endl;
 	cin >> choice;
 
