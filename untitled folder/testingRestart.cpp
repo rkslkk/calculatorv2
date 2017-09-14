@@ -128,7 +128,11 @@ void divisionMenu() {
 char powersMenu() {
 	system("cls");
 	system("clear");
-    cout << "Welcome to the powers and roots Menu. Please choose what you would like to do. " << endl << endl;
+	cout << "Welcome to the powers and roots Menu. Please choose what you would like to do. " << endl << endl;
+	cout << "This menu you always allows you to take powers and roots of a number." << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "\t \t POWERS AND ROOTS MENU" << endl;
+	cout << "---------------------------------------------------" << endl << endl;
 	cout << "A. Square a number \t\t(X^2)" << endl << endl;
 	cout << "B. Cube a number\t\t(X^3)" << endl << endl;
 	cout << "C. Raise to any power\t\t(X^Y)" << endl << endl;
@@ -137,6 +141,9 @@ char powersMenu() {
 	cout << "F. Take any root       \t \t(X^1/Y)" << endl << endl;
 	cout << "M. Return to main menu" << endl << endl;
 	cout << "Q. Quit the program" << endl << endl;
+	cout << "---------------------------------------------------" << endl << endl;
+	cout << "\t   Please enter your choice [ a - f, m, q]: " << endl;
+	cout << "---------------------------------------------------" << endl << endl;
 	cin >> powersChoice;
 	cout << endl;
 
