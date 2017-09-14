@@ -101,5 +101,9 @@ void divisionMenu() {
     cin >> division2;
     double divisionOutput = division1 * division2;
     cout << divisionOutput << " is " << division1 << " divided by " << division2; 
+
+    cin.ignore();
+	cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
+	ch = cin.get();
 }
 
