@@ -142,7 +142,7 @@ char powersMenu() {
 	cout << "M. Return to main menu" << endl << endl;
 	cout << "Q. Quit the program" << endl << endl;
 	cout << "---------------------------------------------------" << endl << endl;
-	cout << "\t   Please enter your choice [ a - f, m, q]: " << endl;
+	cout << "\tPlease enter your choice [ a - f, m, q]: " << endl;
 	cout << "---------------------------------------------------" << endl << endl;
 	cin >> powersChoice;
 	cout << endl;
