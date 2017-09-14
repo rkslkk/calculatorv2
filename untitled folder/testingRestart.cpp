@@ -122,10 +122,14 @@ char powersMenu() {
 	system("cls");
 	system("clear");
     cout << "Welcome to the powers and roots Menu. Please choose what you would like to do. " << endl << endl;
-	cout << "A. Square a number  (X^2)" << endl << endl;
-	cout << "B. Cube a number\t(X^3)" << endl << endl;
-	cout << "C. Raise to any power\t(X^Y)" << endl << endl;
-	cout << "D. Square root any number   (X^1/3)" << endl << endl;
+	cout << "A. Square a number \t\t(X^2)" << endl << endl;
+	cout << "B. Cube a number\t\t(X^3)" << endl << endl;
+	cout << "C. Raise to any power\t\t(X^Y)" << endl << endl;
+	cout << "D. Square root any number\t(X^1/2)" << endl << endl;
+	cout << "E. Cube root any number\t \t(X^1/3)" << endl << endl;
+	cout << "F. Take any root       \t \t(X^1/Y)" << endl << endl;
+	cout << "M. Return to main menu" << endl << endl;
+	cout << "Q. Quit the program" << endl << endl;
 	cin >> powersChoice;
 	cout << endl;
 
@@ -155,7 +159,7 @@ char powersMenu() {
 		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
 		ch = cin.get();
 	}
-	if (powersChoice = 'c') {
+	if (powersChoice == 'c') {
 		system("cls");
 		system("clear");
 		cout << "You have chosen to raise x to any number (y). Please input two numbers: " << endl << endl;
@@ -182,6 +186,36 @@ char powersMenu() {
 		cin.ignore();
 		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
 		ch = cin.get();
+	}
+	else if (powersChoice == 'e') {
+		cout << "You have chosen cube root. Please input a number to cube root: " << endl << endl;
+		cin >> powers1;
+		cout << endl;
+		double squareOutput = cbrt(powers1);
+		cout << squareOutput << " is the cubed root of " << powers1 << endl << endl;
+		
+		cin.ignore();
+		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
+		ch = cin.get();
+	}
+	else if (powersChoice == 'f') {
+		cout << "You have chosen to take any root. Please input two numbers: " << endl << endl;
+		cin >> powers1;
+		cout << endl;
+		cin >> powers2;
+		cout << endl;
+		double squareOutput = pow(powers1, 1/powers2);
+		cout << squareOutput << " is the root of " << powers1 << " to the 1/" << powers2 << endl << endl;
+
+		cin.ignore();
+		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
+		ch = cin.get();
+	}
+	else if (powersChoice == 'm') {
+		cout << endl;
+	}
+	else if (powersChoice = 'q') {
+		exit(0);
 	}
 }
 
