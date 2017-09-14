@@ -6,7 +6,7 @@ using namespace std;
 
 char choice, mainMenu(), ch, powersMenu(), powersChoice;
 double addition1, addition2, subtraction1, subtraction2, multiplication1, multiplication2;
-double division1, division2, powers1;
+double division1, division2, powers1, powers2;
 void additionMenu(), subtractionMenu(), multiplicationMenu(), divisionMenu();
 
 int main() {
@@ -49,13 +49,6 @@ char mainMenu() {
 	cout << "Q. \t \t Quit the program \t \t " << endl << endl;
 	cin >> choice;
 	cout << endl << endl;
-
-	/* if (choice == 'a') {
-		cout << "You have chosen addition." << endl << endl;
-	}
-	else if (choice == 'b') {
-		cout << "You have chosen subtraction." << endl << endl;
-	} */ // I'm not completely sure I need these, so far no I'll comment them out
 
 	return choice;
 }
@@ -113,10 +106,12 @@ void divisionMenu() {
 	system("cls");
 	system("clear");
     cout << "You have chosen division. Please input two numbers to divide: " << endl << endl;
-    cin >> division1;
-    cin >> division2;
-    double divisionOutput = division1 * division2;
-    cout << divisionOutput << " is " << division1 << " divided by " << division2; 
+	cin >> division1;
+	cout << endl;
+	cin >> division2;
+	cout << endl;
+    double divisionOutput = division1/division2;
+    cout << divisionOutput << " is " << division1 << " divided by " << division2 << endl << endl;
 
     cin.ignore();
 	cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
@@ -127,21 +122,66 @@ char powersMenu() {
 	system("cls");
 	system("clear");
     cout << "Welcome to the powers and roots Menu. Please choose what you would like to do. " << endl << endl;
-    cout << "A. Square Stuff (X^2)" << endl << endl;
+	cout << "A. Square a number  (X^2)" << endl << endl;
+	cout << "B. Cube a number\t(X^3)" << endl << endl;
+	cout << "C. Raise to any power\t(X^Y)" << endl << endl;
+	cout << "D. Square root any number   (X^1/3)" << endl << endl;
 	cin >> powersChoice;
 	cout << endl;
-	
+
     if (powersChoice == 'a') {
+		system("cls");
+		system("clear");
         cout << "please input a number to square: " << endl << endl;
 		cin >> powers1;
 		cout << endl;
-		// cin.ignore();
         double squareOutput = pow(powers1, 2);
 		cout << squareOutput << " is " << powers1 << " squared" << endl << endl;
 
 		cin.ignore();
 		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
 		ch = cin.get();
-    }
+	}
+	else if (powersChoice == 'b') {
+		system("cls");
+		system("clear");
+		cout << "Please input a number to cube: " << endl << endl;
+		cin >> powers1;
+		cout << endl;
+		double squareOutput = pow(powers1, 3);
+		cout << squareOutput << " is " << powers1 << " cubed" << endl << endl;
+
+		cin.ignore();
+		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
+		ch = cin.get();
+	}
+	if (powersChoice = 'c') {
+		system("cls");
+		system("clear");
+		cout << "You have chosen to raise x to any number (y). Please input two numbers: " << endl << endl;
+		cin >> powers1;
+		cout << endl;
+		cin >> powers2;
+		cout << endl;
+		double squareOutput = pow(powers1, powers2);
+		cout << squareOutput << " is " << powers1 << " to " << powers2 << endl << endl;
+
+		cin.ignore();
+		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
+		ch = cin.get();
+	}
+	else if (powersChoice == 'd' || powersChoice == 'D') {
+		system("cls");
+		system("clear");
+		cout << "You have chosen to square root a number. Please input a number to square root: " << endl << endl;
+		cin >> powers1;
+		cout << endl;
+		double squareOutput = sqrt(powers1);
+		cout << squareOutput << " is the square root of " << powers1 << endl << endl;
+
+		cin.ignore();
+		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
+		ch = cin.get();
+	}
 }
 
