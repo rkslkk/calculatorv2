@@ -40,13 +40,20 @@ int main() {
 char mainMenu() {
 	system("cls");
 	system("clear"); // for linux
-	cout << "Welcome to the math menu" << endl << endl;
+	cout << "CALCULATOR PRACTICE PROGRAM" << endl << endl;
+	cout << "Hello and welcome to the calculator practice program. \nThis program allows you to practice your math skills. \nChoose what you want to practice in the menu below.\n\n";
+	cout << "-----------------------------------------------------" << endl;
+	cout << "\t \t Main Menu" << endl;
+	cout << "-----------------------------------------------------" << endl << endl;
 	cout << "A. \t \t Addition \t \t (X+Y)" << endl << endl;
 	cout << "B. \t \t Subtraction \t \t (X-Y)" << endl << endl;
 	cout << "C. \t \t Multiplication \t (X*Y)" << endl << endl;
     cout << "D. \t \t Division \t \t (X/Y)" << endl << endl;
     cout << "E. \t \t Powers + Roots \t \t" << endl << endl;
 	cout << "Q. \t \t Quit the program \t \t " << endl << endl;
+	cout << "-----------------------------------------------------" << endl << endl;
+	cout << "\t  Enter your choice [a - e, q]" << endl;
+	cout << "-----------------------------------------------------" << endl << endl;
 	cin >> choice;
 	cout << endl << endl;
 
@@ -121,7 +128,11 @@ void divisionMenu() {
 char powersMenu() {
 	system("cls");
 	system("clear");
-    cout << "Welcome to the powers and roots Menu. Please choose what you would like to do. " << endl << endl;
+	cout << "Welcome to the powers and roots Menu. Please choose what you would like to do. " << endl << endl;
+	cout << "This menu you always allows you to take powers and roots of a number." << endl;
+	cout << "---------------------------------------------------" << endl;
+	cout << "\t \t POWERS AND ROOTS MENU" << endl;
+	cout << "---------------------------------------------------" << endl << endl;
 	cout << "A. Square a number \t\t(X^2)" << endl << endl;
 	cout << "B. Cube a number\t\t(X^3)" << endl << endl;
 	cout << "C. Raise to any power\t\t(X^Y)" << endl << endl;
@@ -130,6 +141,9 @@ char powersMenu() {
 	cout << "F. Take any root       \t \t(X^1/Y)" << endl << endl;
 	cout << "M. Return to main menu" << endl << endl;
 	cout << "Q. Quit the program" << endl << endl;
+	cout << "---------------------------------------------------" << endl << endl;
+	cout << "\tPlease enter your choice [ a - f, m, q]: " << endl;
+	cout << "---------------------------------------------------" << endl << endl;
 	cin >> powersChoice;
 	cout << endl;
 
@@ -215,7 +229,7 @@ char powersMenu() {
 	else if (powersChoice == 'm') {
 		cout << endl;
 	}
-	else if (powersChoice = 'q') {
+	else if (powersChoice == 'q') {
 		exit(0);
 	}
 }
