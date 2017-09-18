@@ -1,10 +1,11 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <iomanip>
 
 using namespace std;
 
-char choice, mainMenu(), ch, powersMenu(), powersChoice;
+char choice, mainMenu(), ch, powersMenu(), powersChoice, intfloatChoice;
 double addition1, addition2, subtraction1, subtraction2, multiplication1, multiplication2;
 double division1, division2, powers1, powers2;
 void additionMenu(), subtractionMenu(), multiplicationMenu(), divisionMenu();
@@ -64,17 +65,37 @@ void subtractionMenu() {
 	system("cls");
 	system("clear");
 	cout << "Welcome to the subtraction menu" << endl << endl;
-	cout << "Please input an X and Y to subtract" << endl << endl;
-	cin >> subtraction1;
-	cout << endl;
-	cin >> subtraction2;
-	cout << endl;
-	double subtractionOutput = (float)subtraction1 - subtraction2;
-	cout << subtractionOutput << " is " << subtraction1 << " - " << subtraction2 << endl << endl;
+	cout << "Would you like to do floating point or integer math? (a/b)" << endl << endl;
+	cin >> intfloatChoice;
 
-	cin.ignore();
-	cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
-	ch = cin.get();
+	if (intfloatChoice == 'a') {
+
+		cout << "Please input an X and Y to subtract" << endl << endl;
+		cin >> subtraction1;
+		cout << endl;
+		cin >> subtraction2;
+		cout << endl;
+		double subtractionOutput = subtraction1 - subtraction2;
+		cout << subtractionOutput << " is " << subtraction1 << " - " << subtraction2 << endl << endl;
+
+		cin.ignore();
+		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
+		ch = cin.get();
+	}
+	else if (intfloatChoice == 'b') {
+
+		cout << "Please input an X and Y to subtract" << endl << endl;
+		cin >> subtraction1;
+		cout << endl;
+		cin >> subtraction2;
+		cout << endl;
+		int subtractionOutput = (int)(subtraction1 - subtraction2);
+		cout << subtractionOutput << " is " << subtraction1 << " - " << subtraction2 << endl << endl;
+
+		cin.ignore();
+		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
+		ch = cin.get();
+	}
 }
 
 void additionMenu() {
