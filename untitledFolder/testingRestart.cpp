@@ -69,7 +69,6 @@ void subtractionMenu() {
 	cin >> intfloatChoice;
 
 	if (intfloatChoice == 'a') {
-
 		cout << "Please input an X and Y to subtract" << endl << endl;
 		cin >> subtraction1;
 		cout << endl;
@@ -83,14 +82,13 @@ void subtractionMenu() {
 		ch = cin.get();
 	}
 	else if (intfloatChoice == 'b') {
-
 		cout << "Please input an X and Y to subtract" << endl << endl;
 		cin >> subtraction1;
 		cout << endl;
 		cin >> subtraction2;
 		cout << endl;
-		int subtractionOutput = (int)(subtraction1 - subtraction2);
-		cout << subtractionOutput << " is " << subtraction1 << " - " << subtraction2 << endl << endl;
+		double subtractionOutput = (subtraction1 - subtraction2);
+		cout << (int)subtractionOutput << " is " << subtraction1 << " - " << subtraction2 << endl << endl;
 
 		cin.ignore();
 		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
@@ -101,49 +99,106 @@ void subtractionMenu() {
 void additionMenu() {
 	system("cls");
 	system("clear");
-	cout << "You have chosen addition. Please input two numbers to add: " << endl << endl;
-	cin >> addition1;
-	cout << endl;
-	cin >> addition2;
-	cout << endl;
-	double additionOutput = addition1 + addition2;
-	cout << additionOutput << " is " << addition1 << " + " << addition2 << endl << endl;
+	cout << "Welcome to the addition menu. " << endl << endl;
+	cout << "Would you like to do floating point or integer math? (a/b)" << endl << endl;
+	cin >> intfloatChoice;
 
-	cin.ignore();
-	cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
-	ch = cin.get();
+	if (intfloatChoice == 'a') {
+		cout << "Please input an X and Y to add: " << endl << endl;
+		cin >> addition1;
+		cout << endl;
+		cin >> addition2;
+		cout << endl;
+		double additionOutput = addition1 + addition2;
+		cout << additionOutput << " is " << addition1 << " + " << addition2 << endl << endl;
+
+		cin.ignore();
+		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
+		ch = cin.get();
+	}
+	else if (intfloatChoice == 'b') {
+		cout << "Please input an X and Y to add: " << endl << endl;
+		cin >> addition1;
+		cout << endl;
+		cin >> addition2;
+		cout << endl;
+		double additionOutput = addition1 + addition2;
+		cout << (int)additionOutput << " is " << addition1 << " + " << addition2 << endl << endl;
+
+		cin.ignore();
+		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
+		ch = cin.get();
+	}
 }
 
 void multiplicationMenu() {
 	system("cls");
 	system("clear");
-	cout << "You have chosen multiplication. Please input two numbers to multiply: " << endl << endl;
-	cin >> multiplication1;
-	cout << endl;
-	cin >> multiplication2;
-	cout << endl;
-	double multiplicationOutput = multiplication1 * multiplication2;
-	cout << multiplicationOutput << " is " << multiplication1 << " times " << multiplication2 << endl << endl;
+	cout << "You have chosen multiplication." << endl << endl;
+	cout << "Would you like to do floating point or integer math? (a/b)" << endl << endl;
+	cin >> intfloatChoice;
 
-	cin.ignore();
-	cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
-	ch = cin.get();
+	if (intfloatChoice == 'a') {
+		cout << "Please input an X and Y to multiply: " << endl << endl;
+		cin >> multiplication1;
+		cout << endl;
+		cin >> multiplication2;
+		cout << endl;
+		double multiplicationOutput = multiplication1 * multiplication2;
+		cout << multiplicationOutput << " is " << multiplication1 << " times " << multiplication2 << endl << endl;
+
+		cin.ignore();
+		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
+		ch = cin.get();
+	}
+	else if (intfloatChoice == 'b') {
+		cout << "Please input an X and Y to multiply: " << endl << endl;
+		cin >> multiplication1;
+		cout << endl;
+		cin >> multiplication2;
+		cout << endl;
+		double multiplicationOutput = multiplication1 * multiplication2;
+		cout << (int)multiplicationOutput << " is " << multiplication1 << " times " << multiplication2 << endl << endl;
+
+		cin.ignore();
+		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
+		ch = cin.get();
+	}
 }
 
 void divisionMenu() {
 	system("cls");
 	system("clear");
-    cout << "You have chosen division. Please input two numbers to divide: " << endl << endl;
-	cin >> division1;
-	cout << endl;
-	cin >> division2;
-	cout << endl;
-    double divisionOutput = division1/division2;
-    cout << divisionOutput << " is " << division1 << " divided by " << division2 << endl << endl;
+	cout << "You have chosen division." << endl << endl;
+	cout << "Would you like to do floating point or integer math? (a/b)" << endl << endl;
+	cin >> intfloatChoice;
 
-    cin.ignore();
-	cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
-	ch = cin.get();
+	if (intfloatChoice == 'a') {
+		cout << "Please input an X and Y to divide: " << endl << endl;
+		cin >> division1;
+		cout << endl;
+		cin >> division2;
+		cout << endl;
+		double divisionOutput = division1/division2;
+		cout << divisionOutput << " is " << division1 << " divided by " << division2 << endl << endl;
+
+		cin.ignore();
+		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
+		ch = cin.get();
+	}
+	else if (intfloatChoice == 'b') {
+		cout << "Please input an X and Y to divide: " << endl << endl;
+		cin >> division1;
+		cout << endl;
+		cin >> division2;
+		cout << endl;
+		double divisionOutput = division1/division2;
+		cout << (int)divisionOutput << " is " << division1 << " divided by " << division2 << endl << endl;
+
+		cin.ignore();
+		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
+		ch = cin.get();
+	}
 }
 
 char powersMenu() {
