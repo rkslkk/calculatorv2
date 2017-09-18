@@ -200,6 +200,7 @@ char powersMenu() {
 		cin.ignore();
 		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
 		ch = cin.get();
+		cout << endl;
 	}
 	else if (powersChoice == 'e') {
 		cout << "You have chosen cube root. Please input a number to cube root: " << endl << endl;
