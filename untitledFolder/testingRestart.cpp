@@ -5,10 +5,25 @@
 
 using namespace std;
 
-char choice, mainMenu(), ch, powersMenu(), powersChoice, intfloatChoice;
-double addition1, addition2, subtraction1, subtraction2, multiplication1, multiplication2;
-double division1, division2, powers1, powers2;
-void additionMenu(), subtractionMenu(), multiplicationMenu(), divisionMenu();
+
+// prototypes
+char 
+choice, 
+mainMenu(), 
+ch, 
+powersMenu(), 
+powersChoice, 
+intfloatChoice;
+
+void 
+additionMenu(), 
+subtractionMenu(), 
+multiplicationMenu(), 
+divisionMenu(), 
+getInput();
+
+// global variables for math operations
+double x, y;
 
 int main() {
 	bool endProgram = true;
@@ -36,6 +51,17 @@ int main() {
 			break;
 		}
 	}
+}
+
+void getInput() {
+	cout << "Please input two numbers: " << endl;
+	cout << "X: ";
+	cin >> x;
+	cout << endl << endl;
+
+	cout << "Y: ";
+	cin >> y;
+	cout << endl << endl;
 }
 
 char mainMenu() {
@@ -69,26 +95,18 @@ void subtractionMenu() {
 	cin >> intfloatChoice;
 
 	if (intfloatChoice == 'a') {
-		cout << "Please input an X and Y to subtract" << endl << endl;
-		cin >> subtraction1;
-		cout << endl;
-		cin >> subtraction2;
-		cout << endl;
-		double subtractionOutput = subtraction1 - subtraction2;
-		cout << subtractionOutput << " is " << subtraction1 << " - " << subtraction2 << endl << endl;
+		getInput();
+		double subtractionOutput = x - y;
+		cout << subtractionOutput << " is " << x << " - " << y << endl << endl;
 
 		cin.ignore();
 		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
 		ch = cin.get();
 	}
 	else if (intfloatChoice == 'b') {
-		cout << "Please input an X and Y to subtract" << endl << endl;
-		cin >> subtraction1;
-		cout << endl;
-		cin >> subtraction2;
-		cout << endl;
-		double subtractionOutput = (subtraction1 - subtraction2);
-		cout << (int)subtractionOutput << " is " << subtraction1 << " - " << subtraction2 << endl << endl;
+		getInput();
+		double subtractionOutput = (x - y);
+		cout << (int)subtractionOutput << " is " << x << " - " << y << endl << endl;
 
 		cin.ignore();
 		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
@@ -104,26 +122,19 @@ void additionMenu() {
 	cin >> intfloatChoice;
 
 	if (intfloatChoice == 'a') {
-		cout << "Please input an X and Y to add: " << endl << endl;
-		cin >> addition1;
+		getInput();
 		cout << endl;
-		cin >> addition2;
-		cout << endl;
-		double additionOutput = addition1 + addition2;
-		cout << additionOutput << " is " << addition1 << " + " << addition2 << endl << endl;
+		double additionOutput = x + y;
+		cout << additionOutput << " is " << x << " + " << y << endl << endl;
 
 		cin.ignore();
 		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
 		ch = cin.get();
 	}
 	else if (intfloatChoice == 'b') {
-		cout << "Please input an X and Y to add: " << endl << endl;
-		cin >> addition1;
-		cout << endl;
-		cin >> addition2;
-		cout << endl;
-		double additionOutput = addition1 + addition2;
-		cout << (int)additionOutput << " is " << addition1 << " + " << addition2 << endl << endl;
+		getInput();
+		double additionOutput = x + y;
+		cout << (int)additionOutput << " is " << x << " + " << y << endl << endl;
 
 		cin.ignore();
 		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
@@ -139,26 +150,18 @@ void multiplicationMenu() {
 	cin >> intfloatChoice;
 
 	if (intfloatChoice == 'a') {
-		cout << "Please input an X and Y to multiply: " << endl << endl;
-		cin >> multiplication1;
-		cout << endl;
-		cin >> multiplication2;
-		cout << endl;
-		double multiplicationOutput = multiplication1 * multiplication2;
-		cout << multiplicationOutput << " is " << multiplication1 << " times " << multiplication2 << endl << endl;
+		getInput();
+		double multiplicationOutput = x * y;
+		cout << multiplicationOutput << " is " << x << " times " << y << endl << endl;
 
 		cin.ignore();
 		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
 		ch = cin.get();
 	}
 	else if (intfloatChoice == 'b') {
-		cout << "Please input an X and Y to multiply: " << endl << endl;
-		cin >> multiplication1;
-		cout << endl;
-		cin >> multiplication2;
-		cout << endl;
-		double multiplicationOutput = multiplication1 * multiplication2;
-		cout << (int)multiplicationOutput << " is " << multiplication1 << " times " << multiplication2 << endl << endl;
+		getInput();
+		double multiplicationOutput = x * y;
+		cout << (int)multiplicationOutput << " is " << x << " times " << y << endl << endl;
 
 		cin.ignore();
 		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
@@ -174,26 +177,18 @@ void divisionMenu() {
 	cin >> intfloatChoice;
 
 	if (intfloatChoice == 'a') {
-		cout << "Please input an X and Y to divide: " << endl << endl;
-		cin >> division1;
-		cout << endl;
-		cin >> division2;
-		cout << endl;
-		double divisionOutput = division1/division2;
-		cout << divisionOutput << " is " << division1 << " divided by " << division2 << endl << endl;
+		getInput();
+		double divisionOutput = x/y;
+		cout << divisionOutput << " is " << x << " divided by " << y << endl << endl;
 
 		cin.ignore();
 		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
 		ch = cin.get();
 	}
 	else if (intfloatChoice == 'b') {
-		cout << "Please input an X and Y to divide: " << endl << endl;
-		cin >> division1;
-		cout << endl;
-		cin >> division2;
-		cout << endl;
-		double divisionOutput = division1/division2;
-		cout << (int)divisionOutput << " is " << division1 << " divided by " << division2 << endl << endl;
+		getInput();
+		double divisionOutput = x/y;
+		cout << (int)divisionOutput << " is " << x << " divided by " << y << endl << endl;
 
 		cin.ignore();
 		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
@@ -227,10 +222,10 @@ char powersMenu() {
 		system("cls");
 		system("clear");
         cout << "please input a number to square: " << endl << endl;
-		cin >> powers1;
+		cin >> x;
 		cout << endl;
-        double squareOutput = pow(powers1, 2);
-		cout << squareOutput << " is " << powers1 << " squared" << endl << endl;
+        double squareOutput = pow(x, 2);
+		cout << squareOutput << " is " << x << " squared" << endl << endl;
 
 		cin.ignore();
 		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
@@ -240,10 +235,10 @@ char powersMenu() {
 		system("cls");
 		system("clear");
 		cout << "Please input a number to cube: " << endl << endl;
-		cin >> powers1;
+		cin >> x;
 		cout << endl;
-		double squareOutput = pow(powers1, 3);
-		cout << squareOutput << " is " << powers1 << " cubed" << endl << endl;
+		double squareOutput = pow(x, 3);
+		cout << squareOutput << " is " << x << " cubed" << endl << endl;
 
 		cin.ignore();
 		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
@@ -253,12 +248,12 @@ char powersMenu() {
 		system("cls");
 		system("clear");
 		cout << "You have chosen to raise x to any number (y). Please input two numbers: " << endl << endl;
-		cin >> powers1;
+		cin >> x;
 		cout << endl;
-		cin >> powers2;
+		cin >> y;
 		cout << endl;
-		double squareOutput = pow(powers1, powers2);
-		cout << squareOutput << " is " << powers1 << " to " << powers2 << endl << endl;
+		double squareOutput = pow(x, y);
+		cout << squareOutput << " is " << x << " to " << y << endl << endl;
 
 		cin.ignore();
 		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
@@ -268,10 +263,10 @@ char powersMenu() {
 		system("cls");
 		system("clear");
 		cout << "You have chosen to square root a number. Please input a number to square root: " << endl << endl;
-		cin >> powers1;
+		cin >> x;
 		cout << endl;
-		double squareOutput = sqrt(powers1);
-		cout << squareOutput << " is the square root of " << powers1 << endl << endl;
+		double squareOutput = sqrt(x);
+		cout << squareOutput << " is the square root of " << x << endl << endl;
 
 		cin.ignore();
 		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
@@ -280,10 +275,10 @@ char powersMenu() {
 	}
 	else if (powersChoice == 'e') {
 		cout << "You have chosen cube root. Please input a number to cube root: " << endl << endl;
-		cin >> powers1;
+		cin >> x;
 		cout << endl;
-		double squareOutput = cbrt(powers1);
-		cout << squareOutput << " is the cubed root of " << powers1 << endl << endl;
+		double squareOutput = cbrt(x);
+		cout << squareOutput << " is the cubed root of " << x << endl << endl;
 		
 		cin.ignore();
 		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
@@ -291,12 +286,12 @@ char powersMenu() {
 	}
 	else if (powersChoice == 'f') {
 		cout << "You have chosen to take any root. Please input two numbers: " << endl << endl;
-		cin >> powers1;
+		cin >> x;
 		cout << endl;
-		cin >> powers2;
+		cin >> y;
 		cout << endl;
-		double squareOutput = pow(powers1, 1/powers2);
-		cout << squareOutput << " is the root of " << powers1 << " to the 1/" << powers2 << endl << endl;
+		double squareOutput = pow(x, 1/y);
+		cout << squareOutput << " is the root of " << x << " to the 1/" << y << endl << endl;
 
 		cin.ignore();
 		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
