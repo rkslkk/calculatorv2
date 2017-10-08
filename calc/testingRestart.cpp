@@ -4,7 +4,7 @@
 #include <iomanip>
 
 using namespace std;
-
+char _hellowrold;
 
 // prototypes
 char 
@@ -20,7 +20,8 @@ additionMenu(),
 subtractionMenu(), 
 multiplicationMenu(), 
 divisionMenu(), 
-getInput();
+getInput(),
+intfloat();
 
 // global variables for math operations
 double x, y;
@@ -64,6 +65,11 @@ void getInput() {
 	cout << endl << endl;
 }
 
+void intfloat() {
+	cout << "Would you like to do integer or floating point math? (a/b)? " << endl;
+	cin >> intfloatChoice;
+}
+
 char mainMenu() {
 	system("cls");
 	system("clear"); // for linux
@@ -91,8 +97,7 @@ void subtractionMenu() {
 	system("cls");
 	system("clear");
 	cout << "Welcome to the subtraction menu" << endl << endl;
-	cout << "Would you like to do floating point or integer math? (a/b)" << endl << endl;
-	cin >> intfloatChoice;
+	intfloat();
 
 	if (intfloatChoice == 'a') {
 		getInput();
@@ -118,10 +123,9 @@ void additionMenu() {
 	system("cls");
 	system("clear");
 	cout << "Welcome to the addition menu. " << endl << endl;
-	cout << "Would you like to do floating point or integer math? (a/b)" << endl << endl;
-	cin >> intfloatChoice;
+	intfloat();
 
-	if (intfloatChoice == 'a') {
+	if (intfloatChoice == 'b') {
 		getInput();
 		cout << endl;
 		double additionOutput = x + y;
@@ -131,7 +135,7 @@ void additionMenu() {
 		cout << "PRESS RETURN/ENTER TO HEAD BACK TO MAIN MENU";
 		ch = cin.get();
 	}
-	else if (intfloatChoice == 'b') {
+	else if (intfloatChoice == 'a') {
 		getInput();
 		double additionOutput = x + y;
 		cout << (int)additionOutput << " is " << x << " + " << y << endl << endl;
@@ -146,8 +150,7 @@ void multiplicationMenu() {
 	system("cls");
 	system("clear");
 	cout << "You have chosen multiplication." << endl << endl;
-	cout << "Would you like to do floating point or integer math? (a/b)" << endl << endl;
-	cin >> intfloatChoice;
+	intfloat();
 
 	if (intfloatChoice == 'a') {
 		getInput();
@@ -173,8 +176,7 @@ void divisionMenu() {
 	system("cls");
 	system("clear");
 	cout << "You have chosen division." << endl << endl;
-	cout << "Would you like to do floating point or integer math? (a/b)" << endl << endl;
-	cin >> intfloatChoice;
+	intfloat();
 
 	if (intfloatChoice == 'a') {
 		getInput();
@@ -248,10 +250,7 @@ char powersMenu() {
 		system("cls");
 		system("clear");
 		cout << "You have chosen to raise x to any number (y). Please input two numbers: " << endl << endl;
-		cin >> x;
-		cout << endl;
-		cin >> y;
-		cout << endl;
+		getInput();
 		double squareOutput = pow(x, y);
 		cout << squareOutput << " is " << x << " to " << y << endl << endl;
 
@@ -286,10 +285,7 @@ char powersMenu() {
 	}
 	else if (powersChoice == 'f') {
 		cout << "You have chosen to take any root. Please input two numbers: " << endl << endl;
-		cin >> x;
-		cout << endl;
-		cin >> y;
-		cout << endl;
+		getInput();
 		double squareOutput = pow(x, 1/y);
 		cout << squareOutput << " is the root of " << x << " to the 1/" << y << endl << endl;
 
